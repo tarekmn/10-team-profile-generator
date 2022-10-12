@@ -6,12 +6,11 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
 
+const dataArray = []
+console.log(dataArray);
 
 
 
-const engineer1 = new Engineer('tarek', '12', 'sdf@', 'git');
-const intern1 = new Intern('sdf', '10', 'sdf', 'yt');
-const manager1 = new Intern('man1', '19', 'fgh', 'yui');
 
 
 
@@ -23,13 +22,6 @@ const manager1 = new Intern('man1', '19', 'fgh', 'yui');
 //   err ? console.log("error") : console.log('HTML Created!'))
 
 // }
-
-
-//Employee = name, employeeID, email
-//Team manager = name, employeeID, email, office#
-//Engineer = name, employeeID, email, github 
-//Intern = name, employeeID, email, school
-
 
 
 function employeeData() {
@@ -106,12 +98,12 @@ async function askAgain(){
 
 
 async function init() {
-
+  
   let addAnother = true
 
   while(addAnother) {
   let data = await employeeData()
-  console.log(data)
+  // console.log(dataArray)
 
     
   
@@ -119,21 +111,28 @@ async function init() {
    let x= await managerData()
     data= {...data, ...x}
     console.log(data)
+    dataArray.push(data)
 
   } else if (data.employeeType === "engineer"){
-    await engineerData()
+    let y= await engineerData()
+    data= {...data, ...y}
+    console.log(data)
   } else {
-    await internData()
+    let z = await internData()
+    data= {...data, ...y}
+    console.log(data)
+
   }
 
 
   let result = await askAgain()
   console.log(result.confirm)
+  console.log(dataArray)
   if(!result.confirm) {
     addAnother= false
+    console.log(dataArray)
   }
  
-  //question to add again
 } 
 }
 
