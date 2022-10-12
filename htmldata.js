@@ -6,7 +6,9 @@
 
 
 function htmlData(dataArray) {
-  return `<!DOCTYPE html>
+  
+
+  let htmlTop = `<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -20,7 +22,7 @@ function htmlData(dataArray) {
   <body>
   
     <div class="container-fluid">
-    <header class=" header row"> <h1>Company Staff ${dataArray.length}</h1>
+    <header class=" header row"> <h1>Company Staff</h1>
     </header>
     
     </div>
@@ -28,25 +30,9 @@ function htmlData(dataArray) {
   
   
     <div class="container-fluid">
-      <div class="row cardRow">
-  
-  
-        <div class="card">
-          <img src="./Assets/img_avatar.png" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>${dataArray[0].name}</b></h4>
-            <p>${dataArray[0].employeeType}</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${dataArray[0].employeeID} </li>
-                <li class="list-group-item">Email: ${dataArray[0].email}</li>
-                <li class="list-group-item">GitHub:</li>
-              </ul>
-          </div>
-        </div>
-  
-  
-       
-  
+      <div class="row cardRow"> `
+
+      let htmlBottom= `
       </div>
     </div>
   
@@ -54,7 +40,33 @@ function htmlData(dataArray) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   
   </body>
-  </html>`
+  </html> `
+
+
+  return
+  htmlTop
+  
+      for  (let i = 0; i < dataArray.length; i++) {
+    $('.cardRow').append(
+          `
+      <div class="card">
+        <img src="./Assets/img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>${dataArray[i].name}</b></h4>
+          <p>${dataArray[i].employeeType}</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID:${dataArray[i].employeeID} </li>
+              <li class="list-group-item">Email: ${dataArray[i].email}</li>
+              <li class="list-group-item"></li>
+            </ul>
+        </div>
+      </div>`
+        ) 
+    } 
+htmlBottom
+
+        
+    
 }
 
 
