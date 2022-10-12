@@ -14,9 +14,6 @@ const intern1 = new Intern('sdf', '10', 'sdf', 'yt');
 const manager1 = new Intern('man1', '19', 'fgh', 'yui');
 
 
-// console.log(engineer1)
-// console.log(intern1)
-// console.log(manager1)
 
 // // TODO: Create a function to write HTML file
 // function writeToFile(data) {
@@ -116,8 +113,12 @@ async function init() {
   let data = await employeeData()
   console.log(data)
 
+    
+  
   if (data.employeeType === "manager") {
-    await managerData()
+   let x= await managerData()
+    data= {...data, ...x}
+    console.log(data)
 
   } else if (data.employeeType === "engineer"){
     await engineerData()
