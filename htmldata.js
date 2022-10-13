@@ -47,10 +47,7 @@ function htmlData(dataArray) {
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${dataArray[i].employeeID} </li>
               <li class="list-group-item email">
-              
               <a href = "mailto: ${dataArray[i].email}">${dataArray[i].email}</a>
-              
-              
               </li>
            `
       if (dataArray[i].employeeType === 'manager') {

@@ -1,6 +1,6 @@
 # 10 Object-Oriented Programming: Team Profile Generator						
 ## Description
-A software company has reached out to me about building a Node.js command-line application that takes in information about employees in the company. From there, it generates an HTML webpage dynamically that displays summaries for each person. As a developer, I accomplished this task by writing a unit test for every part of the code, then building out the application. 
+A client has reached out to me about building a Node.js command-line application that takes in information about employees in the company. From there, it generates an HTML webpage dynamically that displays summaries for each person. As a developer, I accomplished this task by writing a unit test for every part of the code, then building out the application. 
 
  
 
