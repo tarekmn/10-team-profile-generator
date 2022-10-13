@@ -18,14 +18,14 @@ node index.js
 
 ## Usage
 The following GitHub repo url is:
-X
+https://github.com/tarekmn/10-team-profile-generator
 
 
 
 In addition, I included a Screencastify video url: 
 
 
-![Tutorial #1]X
+![Tutorial #1]('https://drive.google.com/file/d/1op7qly0_3iL77i48xrViiypcnZ_Yh2U9/view')
 
 
 
