@@ -47,11 +47,21 @@ function htmlData(dataArray) {
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${dataArray[i].employeeID} </li>
               <li class="list-group-item email">Email: <a>${dataArray[i].email}</a> </li>
-              <li class="list-group-item"></li>
+           `
+      if (dataArray[i].employeeType === 'manager') {
+        html += `<li class="list-group-item">${dataArray[i].office}</li>
+                  </ul>
+              </div>
+            </div>`} else if (dataArray[i].employeeType === 'engineer') {
+        html += `<li class="list-group-item">${dataArray[i].gitHub}</li>
             </ul>
-        </div>
-      </div>`
-    } 
+            </div>
+            </div>`} else {
+        html += `<li class="list-group-item">${dataArray[i].school}</li>
+            </ul>
+            </div>
+            </div>`}
+    }
     return html
   }
 
