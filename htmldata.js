@@ -46,14 +46,19 @@ function htmlData(dataArray) {
           <p>${dataArray[i].employeeType}</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${dataArray[i].employeeID} </li>
-              <li class="list-group-item email">Email: <a>${dataArray[i].email}</a> </li>
+              <li class="list-group-item email">
+              
+              <a href = "mailto: ${dataArray[i].email}">${dataArray[i].email}</a>
+              
+              
+              </li>
            `
       if (dataArray[i].employeeType === 'manager') {
         html += `<li class="list-group-item">${dataArray[i].office}</li>
                   </ul>
               </div>
             </div>`} else if (dataArray[i].employeeType === 'engineer') {
-        html += `<li class="list-group-item">${dataArray[i].gitHub}</li>
+        html += `<li class="list-group-item"><p><a href="https://github.com/${dataArray[i].gitHub}" target ="_blank">GitHub </a></p></li>
             </ul>
             </div>
             </div>`} else {
