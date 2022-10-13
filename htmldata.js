@@ -37,8 +37,9 @@ function htmlData(dataArray) {
 
   //doesn't work with multiple, tried removing return, using append, etc. just wont work
   function appender() {
+    let html = ""
     for (let i = 0; i < dataArray.length; i++) {
-      return `<div class="card">
+      html += `<div class="card">
         <img src="./Assets/img_avatar.png" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>${dataArray[i].name}</b></h4>
@@ -50,7 +51,8 @@ function htmlData(dataArray) {
             </ul>
         </div>
       </div>`
-    }
+    } 
+    return html
   }
 
 
