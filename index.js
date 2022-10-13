@@ -96,7 +96,7 @@ async function init() {
 
   while (addAnother) {
     let data = await employeeData()
-  
+
 
     if (data.employeeType === "manager") {
       let x = await managerData()
@@ -115,7 +115,7 @@ async function init() {
     }
 
     let result = await askAgain()
-    
+
     if (!result.confirm) {
       addAnother = false
       console.log(dataArray)
