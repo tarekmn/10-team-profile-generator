@@ -40,13 +40,13 @@ function htmlData(dataArray) {
     let html = ""
     for (let i = 0; i < dataArray.length; i++) {
       html += `<div class="card">
-        <img src="./Assets/img_avatar.png" alt="Avatar" style="width:100%">
+        <img src="./Assets/teammember.svg" alt="Avatar" style="width:100%">
         <div class="container">
           <h4><b>${dataArray[i].name}</b></h4>
           <p>${dataArray[i].employeeType}</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${dataArray[i].employeeID} </li>
-              <li class="list-group-item">Email: ${dataArray[i].email}</li>
+              <li class="list-group-item email">Email: <a>${dataArray[i].email}</a> </li>
               <li class="list-group-item"></li>
             </ul>
         </div>
